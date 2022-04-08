@@ -9,6 +9,25 @@
   padding: 0;
 }
 
+html {
+  font-family: 'roboto';
+  color: black;
+}
+
+ul,li {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: none;
+}
+
+h1,h2{
+  font-size: 23px;
+}
+
 
 /* --------------------------------------------------
                     COLORS
@@ -19,8 +38,8 @@
     --secondary-color:#ff79da;
     --thirdth-color:#99e2d0;
     --dark-grey : #DBDBDB;
-    --medium-grey: rgb(217, 217, 217);
-    --ligh-grey: #F2F2F2;
+    --medium-grey: rgb(234, 234, 234);
+    --ligh-grey: rgb(246,246,246);
   }
   
 .violet-font {
@@ -42,7 +61,55 @@ color: var(--thirdth-color);
   color: var(--ligh-grey);
 }
 
+/* --------------------------------------------------
+                   BOUTON
+------------------------------------------------------ */
 
+.btn-gradient {
+  padding: 20px;
+  box-shadow:0px 0px 10px -1px #aeaeae;
+	background:linear-gradient(to bottom,  var(--secondary-color) 5%, var(--primary-color) 100%);
+	background-color:var(--secondary-color);
+	border-radius:30px;
+	border:none;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:15px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px var(--primary-color);
+}
+
+
+.btn-grey { 
+  text-align: center;
+  background-color: var(--ligh-grey);
+  padding: 30px 0px ;
+  margin-bottom: 25px;
+  box-shadow:5px 10px 10px -8px #aeaeae;
+  border-radius: 26px ;
+  border: none;
+  font-size: 18px;
+  font-weight: 800;
+  color: black;
+}
+
+.btn-grey:hover {
+  background-color: rgba(147,86,220,0.1);
+  box-shadow:5px 10px 10px -10px #5d5959;
+  transition: 10px;
+
+}
+
+/* --------------------------------------------------
+                   PAGE
+------------------------------------------------------ */
+.page-wrapper {
+ 
+  width: 100%;
+  height: fit-content;
+}
   
 /* --------------------------------------------------
                     HEADER
@@ -52,17 +119,142 @@ header {
     justify-content: center;
     width: 100%;
     height: fit-content;
-    border-bottom: 1px solid var(--dark-grey);
-    box-shadow: 0px 13px 14px -10px #ECECEC;
-    position: fixed;
+    border-bottom: 4px solid var(--dark-grey);
+    box-shadow:0px 15px 13px 4px #aeaeae;
 }
-.logo{
+
+.logo { 
   margin: 15px auto;
 }
 
 /* --------------------------------------------------
                     RECHERCHE
 ------------------------------------------------------ */
+.search-wrapper {
+    
+  align-items: center;
+  width:100%;
+  height: fit-content;
+  background-color: var(--ligh-grey);
+  padding-bottom: 20px;
+}
+
+/* ..................... barre de recherche ............... */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--medium-grey);
+  padding: 20px 0px;
+}
+
+label {
+  margin-right: 10px 0px;
+}
+
+.fa-location-dot {
+  font-size: 15px;
+}
+
+input {
+  font-size: 15px;
+  width: 35%;
+  background-color: var(--medium-grey);
+  text-align:center;
+  border: none;
+  outline: none;
+}
+/* ....................texte........................ */
+
+.search-text {
+  text-align: center;
+  background-color: var(--ligh-grey);
+  margin: 30px auto;
+  width: 75%;
+}
+
+h1 {
+  font-size: 23px;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+
+p{
+  font-size: 16px;
+  font-weight: 350;
+  padding-bottom: 25px;
+}
+
+/* .......................bouton.......................... */
+/* ...........section bouton : .btn-gradient   .............. */
+
+/* --------------------------------------------------
+                    FONCTIONNEMENT
+------------------------------------------------------ */
+
+.fonctionnement-wrapper {
+  margin: 35px 20px;
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+
+li{
+  position: relative;
+  color: black;
+}
+li::before {
+  content:"1";
+  position: absolute;
+  color: white;
+  background-color:var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 50%;
+  text-align: left;
+  left: -10px;
+}
+li:nth-child(2)::before { 
+  content:"2";
+}
+li:nth-child(3)::before {
+  content:"3";
+}
+
+.fa-list,
+.fa-mobile-screen-button,
+.fa-store {
+  font-size: 22px;
+  color: grey;
+  margin-right: 30px;
+}
+
+.fa-list:hover,
+.fa-mobile-screen-button:hover,
+.fa-store:hover {
+  font-size: 22px;
+  color: var(--primary-color);
+  margin-right: 30px;
+}
+
+/* --------------------------------------------------
+                    RESTAURANT
+------------------------------------------------------ */
+
+
+
+/* --------------------------------------------------
+                    FOOTER
+------------------------------------------------------ */
+
+
+  
+
+
+
+
+ 
+
 
 
 
