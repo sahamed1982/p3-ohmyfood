@@ -85,7 +85,7 @@ color: var(--thirdth-color);
 .btn-grey { 
   text-align: center;
   background-color: var(--ligh-grey);
-  padding: 30px 0px ;
+  padding: 25px 0px ;
   margin-bottom: 25px;
   box-shadow:5px 10px 10px -8px #aeaeae;
   border-radius: 26px ;
@@ -105,6 +105,7 @@ color: var(--thirdth-color);
 /* --------------------------------------------------
                    PAGE
 ------------------------------------------------------ */
+
 .page-wrapper {
  
   width: 100%;
@@ -164,6 +165,7 @@ input {
   border: none;
   outline: none;
 }
+
 /* ....................texte........................ */
 
 .search-text {
@@ -179,32 +181,38 @@ h1 {
   padding: 0px 10px;
 }
 
-p{
+.search-text  p{
   font-size: 16px;
   font-weight: 350;
   padding-bottom: 25px;
 }
 
-/* .......................bouton.......................... */
-/* ...........section bouton : .btn-gradient   .............. */
+ 
 
 /* --------------------------------------------------
                     FONCTIONNEMENT
 ------------------------------------------------------ */
 
 .fonctionnement-wrapper {
+  position: relative;
   margin: 35px 20px;
+  padding: 0px 15px;
 }
 
-h2 {
+.fonctionnement-wrapper h2 {
     margin-bottom: 25px;
 }
 
-li{
+.fonctionnement-wrapper li{
   position: relative;
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
   color: black;
+  padding-right: 15px;
 }
-li::before {
+
+.fonctionnement-wrapper li::before {
   content:"1";
   position: absolute;
   color: white;
@@ -214,10 +222,10 @@ li::before {
   text-align: left;
   left: -10px;
 }
-li:nth-child(2)::before { 
+.fonctionnement-wrapper li:nth-child(2)::before { 
   content:"2";
 }
-li:nth-child(3)::before {
+.fonctionnement-wrapper li:nth-child(3)::before {
   content:"3";
 }
 
@@ -226,7 +234,8 @@ li:nth-child(3)::before {
 .fa-store {
   font-size: 22px;
   color: grey;
-  margin-right: 30px;
+  margin-right: 25px;
+  margin-left: 35px;
 }
 
 .fa-list:hover,
@@ -240,6 +249,105 @@ li:nth-child(3)::before {
 /* --------------------------------------------------
                     RESTAURANT
 ------------------------------------------------------ */
+.restaurant-wrapper {
+  height: fit-content;
+  text-align: center;
+  gap: 24px ;
+  background-color: var(--ligh-grey);
+  margin: 35px 15px;
+  padding: 60px 20px;
+}
+
+.liste-restaurant {
+  width: 100%;
+}
+
+.restaurant-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 22px 22px 22px 22px;
+  box-shadow:0px 0px 15px -5px #aeaeae;
+  margin-bottom: 20px;
+  
+}
+
+.restaurant-wrapper h2 {
+  margin-bottom: 25px;
+  text-align: left;
+  }
+
+  .restaurant-wrapper img {
+    width: 100%;
+    border-radius: 22px 22px 0px 0px;
+    object-fit: cover;
+}
+
+.btn-nouveau {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  font-size: 14px;
+  padding: 5px 20px;
+  color: green;
+  background-color: var(--thirdth-color);
+  outline: none;
+  border: none;
+}
+
+.info-frame { 
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-radius: 0px 0px 22px 22px;
+}
+
+.info-frame h3 {
+  font-weight: bold;
+}
+
+.info-frame p {
+  font-size: 16px;
+  padding-top: 5px;
+  font-weight: 350;
+}
+
+.heart-wrapper {
+  position: relative;
+  width: auto;
+  height: fit-content;
+  padding-right: 40px;
+  
+}
+
+.heart-1 {
+  position: absolute;
+	width: 24px; 
+	height: 24px;
+	background: #ffffff;
+	clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+	transform: scale(1.2,0,1);
+  cursor: pointer;
+} 
+
+.heart-2 {
+  position: absolute;
+	width: 24px; 
+	height: 24px;
+	background: black;
+	clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
+  transform: scale(1.3,1.4);
+}
+
+.heart-1:hover {
+  background: linear-gradient(to top, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+  transform: scale(1.4,1.5);
+  transform-origin: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
 
 
 
