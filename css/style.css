@@ -109,24 +109,73 @@ a {
 }
 
 /* --------------------------------------------------
+                   ANIMATION CHARGEMENT
+------------------------------------------------------ */
+.chargement {
+  width: 200px;
+  height: 200px;
+  opacity: 0.50;
+  border: 10px solid var(--black);
+  border-top: 10px solid var(--primary-color);
+  border-left: 10px solid var(--secondary-color);
+  border-bottom: 10px solid var(--thirdth-color);
+  border-radius: 50%;
+  background-color:var(--black) ;
+  background-blend-mode: luminosity;
+
+  /* données d'animation */
+
+  animation: spin 0.5s linear 4 ;
+  transform: scale(0,0);
+  
+  
+  
+
+  /* placement de l'animation au centre */
+
+  margin: auto;
+  position: absolute;
+  top: 0  ; bottom: 0; left: 0; right: 0;
+}
+
+  /* animation  */
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+  
+    }
+
+    100% {
+      transform: rotate(360deg);
+      
+    }
+    
+  }
+
+/* --------------------------------------------------
                    PAGE
 ------------------------------------------------------ */
 
 .page-wrapper {
   width: 100%;
   height: fit-content;
+  padding-top: 67px;
 }
   
 /* --------------------------------------------------
                     HEADER
 ------------------------------------------------------ */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
-  width: 100%;
   height: fit-content;
-  border-bottom: 4px solid var(--dark-grey);
-  box-shadow:0px 15px 13px 4px #aeaeae;
+  box-shadow:0px 2px 5px  5px #aeaeae;
+  background-color: #ffffff;
+  z-index: 1;
 }
 
 .logo { 
@@ -369,7 +418,7 @@ h1 {
 
 footer {
   background-color: var(--black);
-  padding: 25px 20px;
+  padding: 30px 20px;
   color: white;
 }
 
@@ -377,12 +426,17 @@ footer h2 {
   font-family: 'shrikhand';
   font-weight: 300   ;
   color: white;
-  padding: 20px 0px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 footer a {
   color: #ffffff;
 
+}
+
+footer ul {
+  padding-bottom: 40px;
 }
 
 footer li {
