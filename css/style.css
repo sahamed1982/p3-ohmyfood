@@ -14,20 +14,28 @@ html {
   color: black;
 }
 
+h1,h2{
+  font-size: 23px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+p {
+  font-size: 17px;
+}
+
 ul,li {
   list-style-type: none;
 }
 
 a {
   color: black;
-  text-decoration: none;
-  text-decoration-color: none;
+  text-decoration: none; 
 }
 
-h1,h2{
-  font-size: 23px;
-}
-
+ 
 
 /* --------------------------------------------------
                     COLORS
@@ -40,26 +48,11 @@ h1,h2{
     --dark-grey : #DBDBDB;
     --medium-grey: rgb(234, 234, 234);
     --ligh-grey: rgb(246,246,246);
+    --black:rgb(53,53,53);
   }
+
   
-.violet-font {
-  color: var(--primary-color);
-}
-.pink-font {
-    color: var(--secondary-color);
-} 
-.green-font {
-color: var(--thirdth-color);
-}
-.dark-grey-font {
-  color: var(--dark-grey);
-}
-.medium-grey-font {
-  color: var(--medium-grey);
-}
-.light-grey-font {
-  color: var(--ligh-grey);
-}
+
 
 /* --------------------------------------------------
                    BOUTON
@@ -81,25 +74,38 @@ color: var(--thirdth-color);
 	text-shadow:0px 1px 0px var(--primary-color);
 }
 
-
-.btn-grey { 
-  text-align: center;
-  background-color: var(--ligh-grey);
-  padding: 25px 0px ;
+.btn-grey {
+  width: 100%;
+  font-size: 22px;
+  font-weight: 800;
+  color: black;
+  text-align: left;
+  padding: 25px 0px 25px 50px ;
   margin-bottom: 25px;
+  background-color: var(--ligh-grey);
   box-shadow:5px 10px 10px -8px #aeaeae;
   border-radius: 26px ;
   border: none;
-  font-size: 18px;
-  font-weight: 800;
-  color: black;
 }
 
 .btn-grey:hover {
+  font-size: 22px;
+  color: var(--primary-color);
+  margin-right: 25px;
   background-color: rgba(147,86,220,0.1);
   box-shadow:5px 10px 10px -10px #5d5959;
-  transition: 10px;
+}
 
+.btn-nouveau {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  font-size: 14px;
+  padding: 5px 20px;
+  color: green;
+  background-color: var(--thirdth-color);
+  outline: none;
+  border: none;
 }
 
 /* --------------------------------------------------
@@ -107,7 +113,6 @@ color: var(--thirdth-color);
 ------------------------------------------------------ */
 
 .page-wrapper {
- 
   width: 100%;
   height: fit-content;
 }
@@ -116,12 +121,12 @@ color: var(--thirdth-color);
                     HEADER
 ------------------------------------------------------ */
 header {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: fit-content;
-    border-bottom: 4px solid var(--dark-grey);
-    box-shadow:0px 15px 13px 4px #aeaeae;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 4px solid var(--dark-grey);
+  box-shadow:0px 15px 13px 4px #aeaeae;
 }
 
 .logo { 
@@ -132,7 +137,6 @@ header {
                     RECHERCHE
 ------------------------------------------------------ */
 .search-wrapper {
-    
   align-items: center;
   width:100%;
   height: fit-content;
@@ -141,6 +145,7 @@ header {
 }
 
 /* ..................... barre de recherche ............... */
+
 .search-bar {
   display: flex;
   justify-content: center;
@@ -181,8 +186,7 @@ h1 {
   padding: 0px 10px;
 }
 
-.search-text  p{
-  font-size: 16px;
+.search-text  p {
   font-weight: 350;
   padding-bottom: 25px;
 }
@@ -190,7 +194,7 @@ h1 {
  
 
 /* --------------------------------------------------
-                    FONCTIONNEMENT
+                  FONCTIONNEMENT
 ------------------------------------------------------ */
 
 .fonctionnement-wrapper {
@@ -203,7 +207,7 @@ h1 {
     margin-bottom: 25px;
 }
 
-.fonctionnement-wrapper li{
+.fonctionnement-wrapper li {
   position: relative;
   width: 100%;
   font-size: 16px;
@@ -215,47 +219,70 @@ h1 {
 .fonctionnement-wrapper li::before {
   content:"1";
   position: absolute;
+  left: -10px;
+  top: 22px;
   color: white;
   background-color:var(--primary-color);
   padding: 5px 10px;
   border-radius: 50%;
-  text-align: left;
-  left: -10px;
 }
+
 .fonctionnement-wrapper li:nth-child(2)::before { 
   content:"2";
 }
+
 .fonctionnement-wrapper li:nth-child(3)::before {
   content:"3";
 }
 
-.fa-list,
-.fa-mobile-screen-button,
-.fa-store {
-  font-size: 22px;
-  color: grey;
-  margin-right: 25px;
-  margin-left: 35px;
+
+.fa-mobile-screen-button::after {
+  content: "Choississez un restaurant";
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  font-family: 'Roboto';
+  padding-left: 20px;
 }
 
-.fa-list:hover,
-.fa-mobile-screen-button:hover,
-.fa-store:hover {
-  font-size: 22px;
-  color: var(--primary-color);
-  margin-right: 30px;
+.fa-list::after {
+  content: "Composez votre menu";
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  font-family: 'Roboto';
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.fa-store::after {
+  content: "Dégustez au restaurant";
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  font-family: 'Roboto';
+  padding-left: 20px;
 }
 
 /* --------------------------------------------------
                     RESTAURANT
 ------------------------------------------------------ */
+
 .restaurant-wrapper {
+  width:100% ;
   height: fit-content;
   text-align: center;
   gap: 24px ;
   background-color: var(--ligh-grey);
-  margin: 35px 15px;
-  padding: 60px 20px;
+  margin: 40px 0px 0px 0px;
+  padding: 80px 0px;
+}
+
+.restaurant-side-padding {
+  padding: 0 20px;
 }
 
 .liste-restaurant {
@@ -265,16 +292,16 @@ h1 {
 .restaurant-frame {
   position: relative;
   width: 100%;
+  background-color: #ffffff;
   border-radius: 22px 22px 22px 22px;
   box-shadow:0px 0px 15px -5px #aeaeae;
-  margin-bottom: 20px;
-  
+  margin-bottom: 20px; 
 }
 
 .restaurant-wrapper h2 {
   margin-bottom: 25px;
   text-align: left;
-  }
+}
 
   .restaurant-wrapper img {
     width: 100%;
@@ -282,23 +309,11 @@ h1 {
     object-fit: cover;
 }
 
-.btn-nouveau {
-  position: absolute;
-  top: 17px;
-  right: 15px;
-  font-size: 14px;
-  padding: 5px 20px;
-  color: green;
-  background-color: var(--thirdth-color);
-  outline: none;
-  border: none;
-}
-
 .info-frame { 
   display: flex;
   justify-content: space-between;
   text-align: left;
-  padding: 10px 15px;
+  padding: 15px 15px;
   background-color: #ffffff;
   border-radius: 0px 0px 22px 22px;
 }
@@ -308,7 +323,6 @@ h1 {
 }
 
 .info-frame p {
-  font-size: 16px;
   padding-top: 5px;
   font-weight: 350;
 }
@@ -318,6 +332,7 @@ h1 {
   width: auto;
   height: fit-content;
   padding-right: 40px;
+  padding-top: 10px;
   
 }
 
@@ -348,22 +363,34 @@ h1 {
   cursor: pointer;
 }
 
-
-
-
 /* --------------------------------------------------
                     FOOTER
 ------------------------------------------------------ */
 
+footer {
+  background-color: var(--black);
+  padding: 25px 20px;
+  color: white;
+}
 
-  
+footer h2 {
+  font-family: 'shrikhand';
+  font-weight: 300   ;
+  color: white;
+  padding: 20px 0px;
+}
 
+footer a {
+  color: #ffffff;
 
+}
 
+footer li {
+  font-size: 17px;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
 
- 
-
-
-
-
-
+.fa-utensils, .fa-handshake-angle {
+  padding-right: 10px ;
+}
