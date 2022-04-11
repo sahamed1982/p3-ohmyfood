@@ -111,18 +111,20 @@ a {
 /* --------------------------------------------------
                    ANIMATION CHARGEMENT
 ------------------------------------------------------ */
+
 .chargement {
+  z-index: 2;
   width: 200px;
   height: 200px;
-  opacity: 0.50;
+  opacity: 0.60;
   border: 10px solid var(--black);
   border-top: 10px solid var(--primary-color);
   border-left: 10px solid var(--secondary-color);
   border-bottom: 10px solid var(--thirdth-color);
   border-radius: 50%;
-  background-color:var(--black) ;
-  background-blend-mode: luminosity;
-
+  background-color: #5d5959;
+  
+   
   /* données d'animation */
 
   animation: spin 0.5s linear 4 ;
@@ -349,6 +351,7 @@ h1 {
 
 .restaurant-wrapper h2 {
   margin-bottom: 25px;
+  margin-left: 20px;
   text-align: left;
 }
 
@@ -448,3 +451,71 @@ footer li {
 .fa-utensils, .fa-handshake-angle {
   padding-right: 10px ;
 }
+
+
+/* ========================  BREAK 893px============================= */
+@media  only screen and (min-width: 893px) {
+
+  
+
+  .fonctionnement-wrapper i {
+    padding-left: 15px;
+    text-align: left;
+  }
+
+  .fonctionnement-wrapper ul {
+    width: 100%;
+    display: flex;
+  }
+
+  .fonctionnement-wrapper li {
+    width: 33%;
+    padding:0px 14px;
+  }
+
+  .fonctionnement-wrapper li::before {
+    left: 0px;
+    top: 22px;
+
+  }
+
+
+  /* ........................restaurant. break 893px................. */
+
+  .liste-restaurant {  
+    display: flex; 
+    width: 100%;
+    height: fit-content;
+    justify-content: space-around;
+    row-gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .restaurant-frame {
+    width: 45%;
+  }
+  
+}
+
+/* ======================== TAB BREAK 600px============================= */
+
+
+@media  only screen and (min-width: 600px) {
+
+    .fonctionnement-wrapper h2, .fonctionnement-wrapper i, .restaurant-wrapper h2 {
+      text-align: center;
+    }
+
+    .fonctionnement-wrapper i { 
+      padding-left: 0px;
+    }
+
+    
+    
+    
+    .restaurant-wrapper h2 {
+      margin-bottom: 35px;
+    }
+
+  }
+
