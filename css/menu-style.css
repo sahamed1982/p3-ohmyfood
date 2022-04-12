@@ -1,0 +1,321 @@
+/* --------------------------------------------------
+             GENERAL SETTING
+------------------------------------------------------ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'roboto';
+  color: black;
+}
+
+h1 {
+  font-size: 26px;
+  font-family: 'shrikhand';
+  text-align: left;
+  padding: 30px 0px 0px 20px;
+  margin: 0;
+}
+
+h2 {
+
+    padding-top: 30px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+p {
+  font-size: 17px;
+}
+
+ul,li {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none; 
+}
+
+ 
+
+/* --------------------------------------------------
+                    COLORS
+------------------------------------------------------ */
+
+:root {
+    --primary-color:#9356dc;
+    --secondary-color:#ff79da;
+    --thirdth-color:#99e2d0;
+    --dark-grey : #DBDBDB;
+    --medium-grey: rgb(234, 234, 234);
+    --ligh-grey: rgb(246,246,246);
+    --black:rgb(53,53,53);
+  }
+
+  
+
+
+/* --------------------------------------------------
+                   BOUTON
+------------------------------------------------------ */
+
+.btn-gradient {
+  padding: 20px;
+  box-shadow:0px 0px 10px -1px #aeaeae;
+	background:linear-gradient(to bottom,  var(--secondary-color) 5%, var(--primary-color) 100%);
+	background-color:var(--secondary-color);
+	border-radius:30px;
+	border:none;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px; 
+	font-weight:bold;
+	padding:15px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px var(--primary-color);
+}
+
+.btn-white {
+  width: 100%;
+  font-size: 22px;
+  font-weight: 800;
+  color: black;
+  text-align: left;
+  padding: 25px 0px 25px 50px ;
+  margin-bottom: 25px;
+  background-color:#ffffff;
+  box-shadow:5px 10px 10px -8px #aeaeae;
+  border-radius: 26px ;
+  border: none;
+}
+
+.btn-grey:hover {
+  font-size: 22px;
+  color: var(--primary-color);
+  margin-right: 25px;
+  background-color: rgba(147,86,220,0.1);
+  box-shadow:5px 10px 10px -10px #5d5959;
+}
+
+.btn-nouveau {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  font-size: 14px;
+  padding: 5px 20px;
+  color: green;
+  background-color: var(--thirdth-color);
+  outline: none;
+  border: none;
+}
+
+/* --------------------------------------------------
+                   ANIMATION CHARGEMENT
+------------------------------------------------------ */
+
+.chargement {
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+  opacity: 0.60;
+  border: 10px solid var(--black);
+  border-top: 10px solid var(--primary-color);
+  border-left: 10px solid var(--secondary-color);
+  border-bottom: 10px solid var(--thirdth-color);
+  border-radius: 50%;
+  background-color: #5d5959;
+   
+  /* données d'animation */
+
+  animation: spin 0.5s linear 4 ;
+  transform: scale(0,0);
+  
+  /* placement de l'animation au centre */
+
+  margin: auto;
+  position: absolute;
+  top: 0  ; bottom: 0; left: 0; right: 0;
+}
+
+  /* animation  */
+
+  @keyframes spin {
+    
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+    
+  }
+
+/* --------------------------------------------------
+                   PAGE
+------------------------------------------------------ */
+
+.page-wrapper {
+  width: 100%;
+  height: fit-content;
+  padding-top: 67px;
+}
+  
+/* --------------------------------------------------
+                    HEADER
+------------------------------------------------------ */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  background-color: #ffffff;
+  z-index: 1;
+  border: 3px blueviolet solid;
+}
+
+.logo { 
+  margin: 15px auto;
+}
+
+ 
+
+.fa-arrow-left {
+
+    position: absolute;
+    font-size: 22px;
+    font-weight: 600;
+    top: 15px;
+    left: 25px;
+    width: 5px;
+}
+
+/* --------------------------------------------------
+                    FRONT IMAGE
+------------------------------------------------------ */
+.front-image {
+    position: relative;
+    width: 100%;
+    height:fit-content;
+    border: 3px red solid;
+
+}
+.front-image img {
+    width: 100%;
+         
+    object-fit: cover;
+    border: 2px green solid;
+}
+
+.rest-name-wrapper {
+    
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: transparent;
+    
+}
+
+.rest-name {
+    width: 100%;
+    display: flex;
+    border-radius: 45px 45px 0px 0px;
+    background: var(--ligh-grey);
+}
+
+.heart-wrapper {
+  position: relative;
+  top: 30px;
+  left: 25px;
+  height: fit-content;  
+}
+
+.heart-1 {
+  position: absolute;
+	width: 24px; 
+	height: 24px;
+	background:var(--ligh-grey);
+	clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+	transform: scale(0.9,0.8);
+  cursor: pointer;
+} 
+
+.heart-2 {
+  position: absolute;
+	width: 24px; 
+	height: 24px;
+	background: black;
+	clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
+  transform: scale(1.1,1.1);
+}
+
+.heart-1:hover {
+  background: linear-gradient(to top, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+  transform: scale(1.1,1.2);
+  transform-origin: center;
+  transition: 0.5s;
+  cursor: pointer;
+} 
+
+/* --------------------------------------------------
+                    MENU
+------------------------------------------------------ */
+
+.menu-wrapper {
+    background-color: var(--ligh-grey);
+    padding: 0px 10px;
+}
+h2 {
+    border-bottom: 5px var(--thirdth-color) solid  ;
+}
+/* --------------------------------------------------
+                    FOOTER
+------------------------------------------------------ */
+
+footer {
+  background-color: var(--black);
+  padding: 30px 20px;
+  color: white;
+}
+
+footer h2 {
+  font-family: 'shrikhand';
+  font-weight: 300   ;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer ul {
+  padding-bottom: 40px;
+}
+
+footer li {
+  font-size: 17px;
+  padding-bottom: 10px;
+  font-weight: 375;
+}
+
+.fa-utensils, .fa-handshake-angle {
+  padding-right: 10px ;
+}
+
+
+/* ========================  BREAK 893px============================= */

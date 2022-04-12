@@ -14,7 +14,7 @@ html {
   color: black;
 }
 
-h1,h2{
+h1,h2 {
   font-size: 23px;
 }
 
@@ -123,16 +123,12 @@ a {
   border-bottom: 10px solid var(--thirdth-color);
   border-radius: 50%;
   background-color: #5d5959;
-  
    
   /* données d'animation */
 
   animation: spin 0.5s linear 4 ;
   transform: scale(0,0);
   
-  
-  
-
   /* placement de l'animation au centre */
 
   margin: auto;
@@ -143,14 +139,13 @@ a {
   /* animation  */
 
   @keyframes spin {
+    
     0% {
       transform: rotate(0deg);
-  
     }
 
     100% {
       transform: rotate(360deg);
-      
     }
     
   }
@@ -187,6 +182,7 @@ header {
 /* --------------------------------------------------
                     RECHERCHE
 ------------------------------------------------------ */
+
 .search-wrapper {
   align-items: center;
   width:100%;
@@ -206,7 +202,7 @@ header {
 }
 
 label {
-  margin-right: 10px 0px;
+margin-right: 10px;
 }
 
 .fa-location-dot {
@@ -242,9 +238,7 @@ h1 {
   padding-bottom: 25px;
 }
 
- 
-
-/* --------------------------------------------------
+ /* --------------------------------------------------
                   FONCTIONNEMENT
 ------------------------------------------------------ */
 
@@ -394,7 +388,7 @@ h1 {
 	height: 24px;
 	background: #ffffff;
 	clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
-	transform: scale(1.2,0,1);
+	transform: scale(1.2,1);
   cursor: pointer;
 } 
 
@@ -435,7 +429,6 @@ footer h2 {
 
 footer a {
   color: #ffffff;
-
 }
 
 footer ul {
@@ -445,7 +438,7 @@ footer ul {
 footer li {
   font-size: 17px;
   padding-bottom: 10px;
-  font-weight: 400;
+  font-weight: 375;
 }
 
 .fa-utensils, .fa-handshake-angle {
@@ -456,9 +449,7 @@ footer li {
 /* ========================  BREAK 893px============================= */
 @media  only screen and (min-width: 893px) {
 
-  
-
-  .fonctionnement-wrapper i {
+    .fonctionnement-wrapper i {
     padding-left: 15px;
     text-align: left;
   }
@@ -476,7 +467,6 @@ footer li {
   .fonctionnement-wrapper li::before {
     left: 0px;
     top: 22px;
-
   }
 
 
@@ -510,12 +500,9 @@ footer li {
       padding-left: 0px;
     }
 
-    
-    
-    
     .restaurant-wrapper h2 {
       margin-bottom: 35px;
     }
 
   }
-
+/* .....................................end.of.code................................... */
