@@ -17,24 +17,21 @@ html {
 h1 {
   font-size: 26px;
   font-family: 'shrikhand';
-  text-align: left;
+  text-align: center;
   padding: 30px 0px 0px 20px;
   margin: 0;
+
 }
 
 h2 {
 
     padding-top: 30px;
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 h3 {
-  font-size: 21px;
-}
-
-p {
-  font-size: 17px;
+  font-size: 18px;
 }
 
 ul,li {
@@ -70,7 +67,22 @@ a {
 ------------------------------------------------------ */
 
 .btn-gradient {
-  padding: 20px;
+  box-shadow:0px 0px 10px -1px var(--ligh-grey);
+	background: var(--ligh-grey);
+	background-color:var(--ligh-grey);
+	border-radius:30px;
+	border:var(--dark-grey);
+	color:black;
+	font-family:Arial;
+	font-size:14px; 
+	font-weight:bold;
+	padding:15px 45px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px 0px white;
+
+}
+
+.btn-gradient:hover {
   box-shadow:0px 0px 10px -1px #aeaeae;
 	background:linear-gradient(to bottom,  var(--secondary-color) 5%, var(--primary-color) 100%);
 	background-color:var(--secondary-color);
@@ -80,22 +92,28 @@ a {
 	font-family:Arial;
 	font-size:14px; 
 	font-weight:bold;
-	padding:15px 15px;
+	padding:15px 45px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px var(--primary-color);
+  cursor: pointer;
+  transition-duration: 300ms;
+  transform: ease-in-out;
 }
 
 .btn-white {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
-  font-size: 22px;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 300;
   color: black;
   text-align: left;
-  padding: 25px 0px 25px 50px ;
+  padding: 15px 20px 8px 15px ;
   margin-bottom: 25px;
   background-color:#ffffff;
-  box-shadow:5px 10px 10px -8px #aeaeae;
-  border-radius: 26px ;
+  box-shadow:-5px 8px 10px -8px #aeaeae;
+  border-radius: 15px ;
   border: none;
 }
 
@@ -166,6 +184,7 @@ a {
 ------------------------------------------------------ */
 
 .page-wrapper {
+  background-color: var(--ligh-grey);
   width: 100%;
   height: fit-content;
   padding-top: 67px;
@@ -183,7 +202,6 @@ header {
   height: fit-content;
   background-color: #ffffff;
   z-index: 1;
-  border: 3px blueviolet solid;
 }
 
 .logo { 
@@ -209,24 +227,19 @@ header {
     position: relative;
     width: 100%;
     height:fit-content;
-    border: 3px red solid;
-
 }
+
 .front-image img {
     width: 100%;
-         
     object-fit: cover;
-    border: 2px green solid;
 }
 
 .rest-name-wrapper {
-    
     width: 100%;
     position: absolute;
     bottom: 0px;
     left: 0px;
     background-color: transparent;
-    
 }
 
 .rest-name {
@@ -276,11 +289,63 @@ header {
 
 .menu-wrapper {
     background-color: var(--ligh-grey);
-    padding: 0px 10px;
+    padding: 0px 15px;
 }
+
 h2 {
-    border-bottom: 5px var(--thirdth-color) solid  ;
+    margin-left: 10px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
 }
+
+.soulignement-vert-h2 {
+  position: relative;
+  width: 40px;
+  height: 1px;
+  bottom: 12px;
+  left: 10px;
+  border-top: 3px var(--thirdth-color) solid;
+}
+
+.sous-titre { 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.overflow {
+  width: 70%;
+}
+
+.overflow p {
+  font-size: 13px;
+  font-weight: 350;
+  padding: 5px 0px;
+  text-align: justify;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+   
+.sous-titre span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+/* --------------------------------------------------
+                    COMMANDER
+------------------------------------------------------ */
+
+.btn-gradient-wrapper {
+  background-color:var(--ligh-grey);
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+
 /* --------------------------------------------------
                     FOOTER
 ------------------------------------------------------ */
@@ -305,6 +370,7 @@ footer a {
 
 footer ul {
   padding-bottom: 40px;
+
 }
 
 footer li {
