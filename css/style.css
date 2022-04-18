@@ -112,7 +112,7 @@ a {
                    ANIMATION CHARGEMENT
 ------------------------------------------------------ */
 
-.chargement {
+.spinner {
   z-index: 2;
   width: 200px;
   height: 200px;
@@ -122,19 +122,20 @@ a {
   border-left: 10px solid var(--secondary-color);
   border-bottom: 10px solid var(--thirdth-color);
   border-radius: 50%;
-  background-color: #5d5959;
-   
+ 
   /* données d'animation */
 
-  animation: spin 0.5s linear 4 ;
+  animation: spin 0.5s linear 6 ;
   transform: scale(0,0);
+  opacity: 1;
   
   /* placement de l'animation au centre */
 
   margin: auto;
-  position: absolute;
+  position: fixed;
   top: 0  ; bottom: 0; left: 0; right: 0;
 }
+
 
   /* animation  */
 
@@ -142,23 +143,67 @@ a {
     
     0% {
       transform: rotate(0deg);
+      
     }
+
+  
+   
 
     100% {
       transform: rotate(360deg);
+    
     }
     
   }
 
+   /* animation Delay affichage de la page*/
+
+   @keyframes delay-display {
+
+    0% {
+      
+      background-color: #5d5959;
+      transform: scale(0);
+      opacity: 0;
+      
+    }
+
+    78% { transform: scale(0);
+          opacity: 0.7;
+       
+
+    }
+
+    100% {
+      animation-delay: 5s ;
+      transform: scale(1);
+      opacity:1;
+      
+    }
+  }
+   
+  
+.page-wrapper-accueil {
+  background-color: var(--ligh-grey);
+  width: 100%;
+  height: fit-content;
+  padding-top: 67px;
+
+  }
+
+.page-wrapper-accueil, header, 
+.search-wrapper, .fonctionnement-wrapper,
+ .restaurant-wrapper, footer {
+
+  animation-name : delay-display;
+  animation-duration: 4s;
+  transition: cubic-bezier(0.19, 1, 0.22, 1);
+ }
 /* --------------------------------------------------
                    PAGE
 ------------------------------------------------------ */
 
-.page-wrapper {
-  width: 100%;
-  height: fit-content;
-  padding-top: 67px;
-}
+
   
 /* --------------------------------------------------
                     HEADER

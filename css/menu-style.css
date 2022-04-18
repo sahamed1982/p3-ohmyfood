@@ -31,7 +31,11 @@ h2 {
 }
 
 h3 {
+  width: 100%;
   font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 ul,li {
@@ -67,11 +71,11 @@ a {
 ------------------------------------------------------ */
 
 .btn-gradient {
-  box-shadow:0px 0px 10px -1px var(--ligh-grey);
+  box-shadow:0px 1px 10px -1px var(--ligh-grey);
 	background: var(--ligh-grey);
 	background-color:var(--ligh-grey);
 	border-radius:30px;
-	border:var(--dark-grey);
+	border:var(--dark-grey) 1px solid;
 	color:black;
 	font-family:Arial;
 	font-size:14px; 
@@ -79,6 +83,7 @@ a {
 	padding:15px 45px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px 0px white;
+
 
 }
 
@@ -96,25 +101,29 @@ a {
 	text-decoration:none;
 	text-shadow:0px 1px 0px var(--primary-color);
   cursor: pointer;
-  transition-duration: 300ms;
   transform: ease-in-out;
+  margin-bottom: 2px;
 }
 
 .btn-white {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  /* flex-wrap: ; */
+  justify-content: space-between;
   width: 100%;
+  height: fit-content;
   font-size: 20px;
   font-weight: 300;
   color: black;
-  text-align: left;
-  padding: 15px 20px 8px 15px ;
-  margin-bottom: 25px;
+  padding: 0px 0px 0px 0px ;
+  margin: 0px 0px 25px 0px;
   background-color:#ffffff;
   box-shadow:-5px 8px 10px -8px #aeaeae;
   border-radius: 15px ;
-  border: none;
+  overflow: hidden;
+}
+.btn-white:hover { 
+   
+  cursor: pointer;
 }
 
 .btn-grey:hover {
@@ -138,48 +147,6 @@ a {
 }
 
 /* --------------------------------------------------
-                   ANIMATION CHARGEMENT
------------------------------------------------------- */
-
-.chargement {
-  z-index: 2;
-  width: 200px;
-  height: 200px;
-  opacity: 0.60;
-  border: 10px solid var(--black);
-  border-top: 10px solid var(--primary-color);
-  border-left: 10px solid var(--secondary-color);
-  border-bottom: 10px solid var(--thirdth-color);
-  border-radius: 50%;
-  background-color: #5d5959;
-   
-  /* données d'animation */
-
-  animation: spin 0.5s linear 4 ;
-  transform: scale(0,0);
-  
-  /* placement de l'animation au centre */
-
-  margin: auto;
-  position: absolute;
-  top: 0  ; bottom: 0; left: 0; right: 0;
-}
-
-  /* animation  */
-
-  @keyframes spin {
-    
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
-    
-  }
-
-/* --------------------------------------------------
                    PAGE
 ------------------------------------------------------ */
 
@@ -188,8 +155,23 @@ a {
   width: 100%;
   height: fit-content;
   padding-top: 67px;
-}
   
+}
+
+
+
+  /* --------------------------------------------------
+                    ANIMATION
+------------------------------------------------------ */
+/* 
+.retractation {
+  width: 20%;
+  height: 100px;
+  background-color: var(--thirdth-color);
+  border: 2px var(--thirdth-color) solid;
+
+} */
+
 /* --------------------------------------------------
                     HEADER
 ------------------------------------------------------ */
@@ -290,6 +272,7 @@ header {
 .menu-wrapper {
     background-color: var(--ligh-grey);
     padding: 0px 15px;
+    
 }
 
 h2 {
@@ -308,20 +291,21 @@ h2 {
 }
 
 .sous-titre { 
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  width: 100%;
+  padding: 10px 0px 0px 10px;
+
 }
 
 .overflow {
-  width: 70%;
+  width: 60%;
 }
 
 .overflow p {
   font-size: 13px;
   font-weight: 350;
-  padding: 5px 0px;
+  padding: 10px 0px;
   text-align: justify;
   width: 100%;
   white-space: nowrap;
@@ -330,9 +314,82 @@ h2 {
 }
    
 .sous-titre span {
+  position: relative;
+  top: 25px;
   font-size: 15px;
   font-weight: bold;
+  padding-right: 15px;
 }
+
+/* ..........animation retration....... */
+
+.retractation {
+  height: 66px;
+  background-color: var(--thirdth-color);
+  border-radius: 0px 15px 15px 0px;
+  display: none;
+}
+
+.btn-white:hover>.retractation {
+  display: inline-block;
+  width: 30%; 
+  animation: retracter 0.5s;
+}
+
+@keyframes retracter {
+  
+  0% {
+    width: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    visibility: visible;
+    width: 30%;
+  }
+  
+}
+
+/* .......... animation rotation check........  */
+
+.rotation {
+  display: flex;
+  justify-content: center;
+  margin: 13px auto;
+  background-color: var(--thirdth-color); 
+  width: 33%;
+  border-radius: 50%;
+}
+
+.btn-white:hover>.retractation>.rotation {
+  animation: spin 0.5s;
+}
+
+
+@keyframes spin {
+  
+0% {
+  transform: rotate(0deg);
+  
+}
+
+100% {
+  transform: rotate(360deg);
+
+}
+
+}
+
+.fa-circle-check {
+  
+  font-size: 40px;
+  color:#ffffff;
+  background-color:var(--thirdth-color);
+  
+}
+
+
+
 
 
 /* --------------------------------------------------
