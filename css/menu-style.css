@@ -25,9 +25,9 @@ h1 {
 
 h2 {
 
-    padding-top: 30px;
-    font-size: 18px;
-    font-weight: 300;
+  padding-top: 30px;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 h3 {
@@ -119,15 +119,11 @@ a {
   box-shadow:-5px 8px 10px -8px #aeaeae;
   border-radius: 15px ;
   overflow: hidden;
-
-  
 }
 
 .btn-white:hover {  
   cursor: pointer;
 }
-
-/
 
 .btn-grey:hover {
   font-size: 22px;
@@ -150,10 +146,10 @@ a {
 }
 
 /* --------------------------------------------------
-                   PAGE
+                   ANIMATION
 ------------------------------------------------------ */
 
-/* .................animation apparition liste menu....  */
+/* .................animation fading apparition liste menu....  */
 
 .fading1 {
   animation: fading ease-in 1 0.7s;
@@ -190,11 +186,6 @@ a {
   }
   
 }
-
-
-
-
-
 
 /* --------------------------------------------------
                    PAGE
@@ -265,6 +256,7 @@ header {
     display: flex;
     border-radius: 45px 45px 0px 0px;
     background: var(--ligh-grey);
+
 }
 
 .heart-wrapper {
@@ -308,7 +300,6 @@ header {
 .menu-wrapper {
     background-color: var(--ligh-grey);
     padding: 0px 15px;
-    
 }
 
 h2 {
@@ -476,5 +467,41 @@ footer li {
   padding-right: 10px ;
 }
 
+/* =================================== MEDIA QUERIES ================================= */
 
-/* ========================  BREAK 893px============================= */
+
+/* ......MEDIA MIN 800px ...................... */
+
+@media  only screen and (min-width: 800px) {
+  .menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .entrees-wrapper, 
+  .plats-wrapper, 
+  .desserts-wrapper {
+    width: 33%;
+    }
+  }
+
+  /* ......MEDIA MIN 577px ...................... */
+
+
+@media  only screen and (max-width: 577px) {
+
+  .menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 100px;
+    }
+
+  .btn-white {
+  width: 150%;
+  }
+
+  .rest-name {
+  justify-content: center;
+  }
+} 

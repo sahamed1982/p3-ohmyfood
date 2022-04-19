@@ -510,6 +510,7 @@ footer li {
 
 
   /* ........................restaurant. break 893px................. */
+  @media  only screen and (min-width: 893px) {
 
   .liste-restaurant {  
     display: flex; 
