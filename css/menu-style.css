@@ -107,7 +107,6 @@ a {
 
 .btn-white {
   display: flex;
-  /* flex-wrap: ; */
   justify-content: space-between;
   width: 100%;
   height: fit-content;
@@ -120,11 +119,15 @@ a {
   box-shadow:-5px 8px 10px -8px #aeaeae;
   border-radius: 15px ;
   overflow: hidden;
+
+  
 }
-.btn-white:hover { 
-   
+
+.btn-white:hover {  
   cursor: pointer;
 }
+
+/
 
 .btn-grey:hover {
   font-size: 22px;
@@ -150,6 +153,53 @@ a {
                    PAGE
 ------------------------------------------------------ */
 
+/* .................animation apparition liste menu....  */
+
+.fading1 {
+  animation: fading ease-in 1 0.7s;
+  
+}
+
+.fading2{
+  animation: fading ease-in 1 0.9s;
+  
+}
+
+.fading3 {
+  animation: fading ease-in 1 1.1s;
+  
+}
+
+.fading4 {
+  animation: fading ease-in 1 1.3s;
+
+}
+
+@keyframes fading {
+
+  0% {
+    
+    transform: translateY(21%);
+    opacity: 0;
+    
+  }
+
+  100% {
+    opacity: 100%;
+    
+  }
+  
+}
+
+
+
+
+
+
+/* --------------------------------------------------
+                   PAGE
+------------------------------------------------------ */
+
 .page-wrapper {
   background-color: var(--ligh-grey);
   width: 100%;
@@ -157,20 +207,6 @@ a {
   padding-top: 67px;
   
 }
-
-
-
-  /* --------------------------------------------------
-                    ANIMATION
------------------------------------------------------- */
-/* 
-.retractation {
-  width: 20%;
-  height: 100px;
-  background-color: var(--thirdth-color);
-  border: 2px var(--thirdth-color) solid;
-
-} */
 
 /* --------------------------------------------------
                     HEADER
