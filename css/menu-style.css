@@ -47,8 +47,6 @@ a {
   text-decoration: none; 
 }
 
- 
-
 /* --------------------------------------------------
                     COLORS
 ------------------------------------------------------ */
@@ -472,7 +470,8 @@ footer li {
 
 /* ......MEDIA MIN 800px ...................... */
 
-@media  only screen and (min-width: 800px) {
+@media screen and (min-width: 800px) {
+
   .menu-wrapper {
     display: flex;
     justify-content: space-between;
@@ -488,7 +487,7 @@ footer li {
   /* ......MEDIA MIN 577px ...................... */
 
 
-@media  only screen and (max-width: 577px) {
+@media screen and (min-width: 577px) and (max-width:799px){
 
   .menu-wrapper {
     display: flex;
