@@ -113,7 +113,7 @@ a {
 ------------------------------------------------------ */
 
 .spinner {
-  z-index: 2;
+  z-index: 1;
   width: 200px;
   height: 200px;
   opacity: 0.60;
@@ -211,7 +211,7 @@ header {
   height: fit-content;
   box-shadow:0px 2px 5px  5px #aeaeae;
   background-color: #ffffff;
-  z-index: 1;
+  z-index: 2;
 }
 
 .logo { 

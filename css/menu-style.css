@@ -152,7 +152,7 @@ a {
   -webkit-animation: fading ease-in 1 0.7s;
   
 }
-
+git st
 .fading2{
   -webkit-animation: fading ease-in 1 0.9s;
   
@@ -207,7 +207,7 @@ header {
   justify-content: center;
   height: fit-content;
   background-color: #ffffff;
-  z-index: 1;
+  z-index: 2;
 }
 
 .logo { 
