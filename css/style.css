@@ -425,6 +425,8 @@ h1 {
 
 .heart-wrapper {
   position: relative;
+  bottom: 65px;
+  left: 240px;
   width: auto;
   height: fit-content;
   padding-right: 40px;
