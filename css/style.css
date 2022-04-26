@@ -72,6 +72,16 @@ a {
 	padding:15px 15px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px var(--primary-color);
+  cursor: pointer;
+}
+
+.btn-gradient:hover {
+  cursor: pointer ;
+  box-shadow:3px 05px 20px 1px #989393;
+  background:linear-gradient(to bottom,  var(--secondary-color) 5%, var(--primary-color) 100%);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: brightness(1.1);
 }
 
 .btn-grey {
